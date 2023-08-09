@@ -24,6 +24,11 @@ EchoActor:
   script:
     - mvn -Dtest=echo.actor.EchoActorTest test
 
+DayteimActor:
+  stage: test
+  script:
+    - mvn -Dtest=daytime.actor.DaytimeActorTest test
+
 In2OutActor:
   stage: test
   script:
