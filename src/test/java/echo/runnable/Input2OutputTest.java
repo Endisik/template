@@ -10,6 +10,6 @@ public  class Input2OutputTest {
 	@CsvSource({"'Hallo1\nHallo2'",
 							"'HalloHallo\njaja'"})
 	public void test(String s) {
-    assertEquals("bla","bla");
+    assertEquals("vor der Wahl","nach der Wahl");
 	}
 }

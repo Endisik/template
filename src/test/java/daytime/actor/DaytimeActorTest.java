@@ -11,7 +11,6 @@ public  class DaytimeActorTest {
 							"'HalloHallo'"})
 	public void test(String s) throws InterruptedException {
 
-		Thread.sleep(500);
-    assertEquals("bla","bla");
+    assertEquals("vor der Wahl","nach der Wahl");
 	}
 }

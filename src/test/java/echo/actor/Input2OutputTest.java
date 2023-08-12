@@ -10,7 +10,7 @@ public  class Input2OutputTest {
 	@CsvSource({"'Hallo'",
 							"'HalloHallo'"})
 	public void test(String s) throws InterruptedException {
-    assertEquals("bla","bla");
+    assertEquals("vor der Wahl","nach der Wahl");
 
   }
 }
