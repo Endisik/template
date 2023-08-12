@@ -585,18 +585,6 @@ public abstract class Result<A> implements Serializable {
     return lift2(f).apply(a).apply(b);
   }
 
-  public static <A> Result<A> unfold(A a, Function<A, Result<A>> f) {
-    Result<A> ra = Result.success(a);
-    return unfold(new Tuple<>(ra, ra), f).eval().snd;
-  }
-
-  public static <A> TailCall<Tuple<Result<A>, Result<A>>> unfold(Tuple<Result<A>, Result<A>> a, Function<A, Result<A>> f) {
-    Result<A> x = a.snd.flatMap(f::apply);
-    return x.isSuccess()
-        ? TailCall.sus(() -> unfold(new Tuple<>(a.snd, x), f))
-        : TailCall.ret(a);
-  }
-
   public static <A> Result<A> join(Result<Result<A>> mm){
     return mm.flatMap(m->m);
   }
