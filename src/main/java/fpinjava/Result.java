@@ -5,8 +5,6 @@ import java.io.Serializable;
 import java.util.Objects;
 import java.util.concurrent.Callable;
 
-import tuple.Tuple;
-
 public abstract class Result<A> implements Serializable {
 
   private Result() {
